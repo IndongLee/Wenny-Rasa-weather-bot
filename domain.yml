@@ -1,0 +1,72 @@
+intents:
+- ask_weather
+- greet
+- goodbye
+- thanks
+- out_of_scope
+- bridge
+entities:
+- city
+- date
+- time
+- name
+- status
+- day_of_week
+slots:
+  city:
+    type: unfeaturized
+  date:
+    type: unfeaturized
+  day_of_week:
+    type: unfeaturized
+  menu:
+    type: unfeaturized
+  name:
+    type: unfeaturized
+  requested_slot:
+    type: unfeaturized
+  status:
+    type: unfeaturized
+  time:
+    type: unfeaturized
+templates:
+  utter_ask_city:
+  - text: Where is the city you find?
+  - text: Where is your city?
+  utter_goodbye:
+  - text: Talk to you later!
+  - text: Have a good day.
+  - text: Until next time!
+  utter_greet:
+  - text: Hey! How are you? What can I help you?
+  - text: What do you need?
+  - text: Hi. What are you looking for?
+  - text: Hey there! Please choose one of the options! or you can ask me about weather
+      information.
+  - text: Hello! What can I help you find today?
+  utter_noworries:
+  - text: Great, carry on!
+  - text: Thank you, Sir!
+  - text: I'm honored to help you.
+  - text: My pleasure.
+  - text: You are welcome!
+  utter_ask_date:
+  - text: What time do you want?
+  utter_bridge:
+  - text: Well, What do you want to know?
+  utter_sorry:
+  - text: I'm sorry. That's something I can't help. I can tell you weather information.
+  - text: I can't understand that. Is there anything else about weather?
+  utter_default:
+  - text: Hi! my name is Wenny. What can I help you?
+actions:
+- utter_ask_city
+- utter_ask_date
+- utter_goodbye
+- utter_greet
+- utter_bridge
+- utter_noworries
+- select_action
+- utter_sorry
+forms:
+- answer_weather_form

@@ -1,0 +1,35 @@
+digraph  {
+0 [class="start active", fillcolor=green, fontsize=12, label=START, style=filled];
+1 [class="", fontsize=12, label=utter_greet];
+4 [class="", fontsize=12, label=utter_goodbye];
+"-6" [class=ellipsis, label="..."];
+5 [class="", fontsize=12, label=utter_iamabot];
+"-7" [class=ellipsis, label="..."];
+7 [class="", fontsize=12, label=action_check_name];
+"-9" [class=ellipsis, label="..."];
+9 [class=active, fontsize=12, label=action_answer_weather];
+"-13" [class=ellipsis, label="..."];
+"-15" [class=ellipsis, label="..."];
+15 [class="intent dashed active", label="  ?  ", shape=rect];
+16 [class=intent, fillcolor=lightblue, label="/greet", shape=rect, style=filled];
+17 [class=intent, fillcolor=lightblue, label="/goodbye", shape=rect, style=filled];
+18 [class=intent, fillcolor=lightblue, label="/bot_challenge", shape=rect, style=filled];
+19 [class=intent, fillcolor=lightblue, label="/name{'name': 'kim'}", shape=rect, style=filled];
+20 [class="intent active", fillcolor=lightblue, label="how is the weather in Seoul at 9pm?", shape=rect, style=filled];
+0 -> 16  [class="", key=0];
+0 -> 17  [class="", key=0];
+0 -> 18  [class="", key=0];
+0 -> 19  [class="", key=0];
+0 -> 20  [class=active, key=0];
+1 -> "-13"  [class="", key=NONE, label=""];
+4 -> "-6"  [class="", key=NONE, label=""];
+5 -> "-7"  [class="", key=NONE, label=""];
+7 -> "-9"  [class="", key=NONE, label=""];
+9 -> "-15"  [class="", key=NONE, label=""];
+9 -> 15  [class=active, key=NONE, label=""];
+16 -> 1  [class="", key=0];
+17 -> 4  [class="", key=0];
+18 -> 5  [class="", key=0];
+19 -> 7  [class="", key=0];
+20 -> 9  [class=active, key=0];
+}
